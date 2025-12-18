@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :root {
     --primary-color: #6c5ce7;
     --secondary-color: #a29bfe;
@@ -9,27 +8,11 @@
     --gradient: linear-gradient(90deg, #6c5ce7 0%, #a29bfe 100%);
 }
 
-=======
-/* ================================================= */
-/* 1. Variáveis e Estilos Globais        */
-/* ================================================= */
-:root {
-    --primary-color: #007bff; /* Azul vibrante */
-    --secondary-color: #ffffff; /* Branco puro */
-    --background-color: #121212; /* Preto escuro para um visual "deep black" */
-    --text-color: #fff; /* Branco suave para legibilidade */
-    --card-bg: #1e1e1e; /* Fundo dos cards ligeiramente mais claro que o fundo principal */
-    --transition-speed: 0.4s;
-}
-
-/* Base do corpo e da página */
->>>>>>> 550751bb3edf7b0aa1aa2772429323cee3a5f5f7
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     scroll-behavior: smooth;
-<<<<<<< HEAD
     margin: 0;
 }
 
@@ -38,22 +21,12 @@ section {
 }
 
 .stars-container {
-=======
-    line-height: 1.6;
-}
-
-/* ================================================= */
-/* 2. Fundo Animado (Blurry Blobs)       */
-/* ================================================= */
-.blob-container {
->>>>>>> 550751bb3edf7b0aa1aa2772429323cee3a5f5f7
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
-<<<<<<< HEAD
 }
 
 .stars {
@@ -148,173 +121,6 @@ footer {
     background-color: #000 !important;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-=======
-    overflow: hidden;
-}
-
-.blob {
-    position: absolute;
-    border-radius: 50%;
-    opacity: 0.6;
-    filter: blur(80px);
-    animation: blob-anim 20s infinite alternate ease-in-out;
-}
-
-.blob:nth-child(1) {
-    background-color: var(--primary-color);
-    width: 400px;
-    height: 400px;
-    top: 10%;
-    left: 10%;
-}
-
-.blob:nth-child(2) {
-    background-color: #ff9900;
-    width: 300px;
-    height: 300px;
-    top: 50%;
-    left: 80%;
-}
-
-.blob:nth-child(3) {
-    background-color: #5d3fd3;
-    width: 500px;
-    height: 500px;
-    top: 70%;
-    left: 30%;
-}
-
-@keyframes blob-anim {
-    0% { transform: translate(0, 0) scale(1); }
-    33% { transform: translate(30vw, -15vh) scale(1.1); }
-    66% { transform: translate(-20vw, 20vh) scale(0.9); }
-    100% { transform: translate(0, 0) scale(1); }
-}
-
-/* ================================================= */
-/* 3. Navbar e Cabeçalho                 */
-/* ================================================= */
-.navbar {
-    background-color: rgba(18, 18, 18, 0.8) !important; /* Fundo semi-transparente para o 'blur effect' */
-    backdrop-filter: blur(10px); /* Efeito de vidro em navegadores modernos */
-    -webkit-backdrop-filter: blur(10px); /* Suporte para navegadores WebKit */
-    border-bottom: 2px solid var(--primary-color);
-}
-
-.navbar-brand, .nav-link {
-    color: var(--secondary-color) !important;
-    font-weight: 500;
-}
-
-/* Animação de Sublinhado */
-.nav-link {
-    position: relative;
-    transition: color var(--transition-speed) ease-in-out;
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--primary-color);
-    transition: width var(--transition-speed) ease-in-out;
-}
-
-.nav-link:hover::after {
-    width: 100%;
-}
-
-header {
-    background: transparent !important; /* Fundo transparente para ver o blob */
-    border-bottom: none;
-}
-
-.lead {
-    color: var(--primary-color);
-    font-weight: 400;
-}
-
-/* ================================================= */
-/* 4. Seções e Componentes               */
-/* ================================================= */
-.border-bottom {
-    border-color: var(--primary-color) !important;
-}
-
-h2 {
-    color: var(--secondary-color);
-    transition: color var(--transition-speed) ease;
-}
-
-h2:hover {
-    color: var(--primary-color);
-}
-
-/* Animação de Brilho nos Cards */
-.card {
-    background-color: var(--card-bg);
-    border: none;
-    border-left: 5px solid var(--primary-color);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -75%;
-    width: 50%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.1);
-    transform: skewX(-45deg);
-    transition: left var(--transition-speed) ease-in-out;
-}
-
-.card:hover::before {
-    left: 125%;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
-}
-
-.card-title {
-    color: var(--primary-color);
-}
-
-.text-muted {
-    color: #999 !important;
-}
-
-/* ================================================= */
-/* 5. Animações de Entrada (JS)          */
-/* ================================================= */
-.fade-in-section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fade-in-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Efeito de Digitação */
-#animated-text {
-    width: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 2px solid var(--primary-color);
-    animation: typing 2.5s steps(20, end) forwards, blink-caret 0.75s step-end infinite;
->>>>>>> 550751bb3edf7b0aa1aa2772429323cee3a5f5f7
 }
 
 @keyframes typing {
@@ -323,7 +129,6 @@ h2:hover {
 }
 
 @keyframes blink-caret {
-<<<<<<< HEAD
     50% { border-color: transparent }
 }
 
@@ -580,62 +385,4 @@ h2:hover {
 
 .project-card {
     min-width: 100%;
-=======
-    from, to { border-color: transparent }
-    50% { border-color: var(--primary-color) }
-}
-
-/* ================================================= */
-/* 6. Rodapé e Outros Detalhes           */
-/* ================================================= */
-footer {
-    background-color: var(--background-color) !important;
-    border-top: 2px solid var(--primary-color);
-}
-
-/* Efeito sutil em itens de lista (habilidades) */
-#habilidades li {
-    padding-left: 10px;
-    border-left: 2px solid transparent;
-    transition: border-left 0.3s ease-in-out;
-}
-
-#habilidades li:hover {
-    border-left: 2px solid var(--primary-color);
-}
-
-.resp {
-    color: #fff;
-}
-
-.card-text {
-    color: #007bff !important;
-}
-
-/* Container para o efeito */
-.nome.display-4 {
-    font-family: monospace; /* Fonte monoespaçada ajuda a dar o efeito de terminal */
-    overflow: hidden; /* Garante que o texto fique escondido */
-    white-space: nowrap; /* Impede que o texto quebre a linha */
-    width: 0; /* Começa com largura zero */
-    border-right: 2px solid; /* Cria o "cursor" que pisca */
-    animation: 
-        typing 3s steps(30, end) forwards,
-        blink-caret 0.75s step-end infinite;
-}
-
-/* A animação de digitação */
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-
-/* A animação do cursor piscando */
-@keyframes blink-caret {
-    50% { border-color: transparent }
-}
-
-.tit.border-bottom {
-    padding-top: 70px;
->>>>>>> 550751bb3edf7b0aa1aa2772429323cee3a5f5f7
 }
