@@ -29,4 +29,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+<<<<<<< HEAD
 document.getElementById('animated-text').textContent = '';
+
+
+function copiarEmail() {
+    const email = "thiagomarcelino897@gmail.com";
+    navigator.clipboard.writeText(email);
+    
+    const label = document.getElementById('labelEmail');
+    const originalText = label.innerText;
+    
+    label.innerText = "Copiado!";
+    label.style.color = "#25d366";
+    
+    setTimeout(() => {
+        label.innerText = originalText;
+        label.style.color = "#fff";
+    }, 2000);
+}
+=======
+document.getElementById('animated-text').textContent = '';
+>>>>>>> 550751bb3edf7b0aa1aa2772429323cee3a5f5f7
