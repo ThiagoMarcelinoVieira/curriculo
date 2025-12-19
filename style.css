@@ -18,6 +18,7 @@ body {
 
 section {
     scroll-margin-top: 80px;
+    padding-bottom: 50px;
 }
 
 .stars-container {
@@ -34,7 +35,7 @@ section {
     width: 100%;
     height: 100%;
     background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
-    opacity: 0.3;
+    opacity: 0.9;
 }
 
 .custom-header {
@@ -365,6 +366,14 @@ footer {
     }
 }
 
+@media (max-width: 750px) {
+    .nome {
+        font-size: 1.8rem !important;
+        word-wrap: break-word;
+        text-align: center;
+    }
+}
+
 .custom-scroll::-webkit-scrollbar {
     height: 8px;
 }
@@ -385,4 +394,37 @@ footer {
 
 .project-card {
     min-width: 100%;
+}
+
+.language-box {
+    background: linear-gradient(145deg, rgba(108, 92, 231, 0.05) 0%, rgba(0, 0, 0, 0.4) 100%);
+    border: 1px solid var(--primary-color);
+}
+
+.language-box:hover {
+    box-shadow: 0 0 20px rgba(108, 92, 231, 0.3);
+    border-color: var(--secondary-color);
+}
+
+.language-badge {
+    background-color: transparent;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    font-weight: normal;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.language-box:hover .language-badge {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.language-box i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
 }
