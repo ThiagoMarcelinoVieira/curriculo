@@ -1,0 +1,396 @@
+:root {
+    --primary-color: #6c5ce7;
+    --secondary-color: #a29bfe;
+    --background-color: #000000;
+    --card-bg: #0a0a0a;
+    --text-color: #ffffff;
+    --transition-speed: 0.4s;
+    --gradient: linear-gradient(90deg, #6c5ce7 0%, #a29bfe 100%);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+.stars-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+    opacity: 0.3;
+}
+
+.custom-header {
+    background-color: #000000;
+    border-bottom: 4px solid var(--primary-color);
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    padding: 60px 0;
+    box-shadow: 0 10px 30px rgba(108, 92, 231, 0.2);
+}
+
+.nome.display-4 {
+    font-family: monospace;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    margin: 0 auto;
+    border-right: 3px solid var(--primary-color);
+    animation: typing 3s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+    color: #fff;
+}
+
+.lead {
+    color: var(--secondary-color) !important;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--primary-color);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(108, 92, 231, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(108, 92, 231, 0.3);
+    border-color: var(--secondary-color);
+}
+
+.tit.border-bottom {
+    border-color: var(--primary-color) !important;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.navbar {
+    background-color: #000 !important;
+    border-bottom: 2px solid var(--primary-color);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color) !important;
+}
+
+.profile-img {
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+}
+
+.resp {
+    color: #ccc;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary-color);
+    text-shadow: 0 0 5px var(--primary-color);
+}
+
+footer {
+    border-top: 1px solid var(--primary-color);
+    background-color: #000 !important;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    50% { border-color: transparent }
+}
+
+.highlight {
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(162, 155, 254, 0.4);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--secondary-color) !important;
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+.skill-card {
+    background: var(--card-bg);
+    border: 1px solid #4834d4;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.skill-card:hover {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 20px rgba(162, 155, 254, 0.4);
+    transform: translateY(-5px);
+}
+
+.skill-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.skill-header img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.skill-header h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.progress {
+    flex-grow: 1;
+    background-color: #1a1a1a;
+    height: 8px;
+    border-radius: 10px;
+}
+
+.progress-bar {
+    background: var(--gradient);
+    box-shadow: 0 0 8px var(--primary-color);
+}
+
+.sublime-orange {
+    filter: invert(61%) sepia(85%) saturate(1543%) hue-rotate(358deg) brightness(101%) contrast(105%);
+    width: 50px;
+    height: 50px;
+}
+
+.skill-item-box {
+    background: rgba(108, 92, 231, 0.05);
+    border: 1px solid rgba(108, 92, 231, 0.2);
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.hard-border {
+    border-color: rgba(162, 155, 254, 0.4);
+}
+
+.skill-item-box i {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    min-width: 40px;
+    text-align: center;
+}
+
+.skill-item-box h5 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.skill-item-box:hover {
+    background: rgba(108, 92, 231, 0.15);
+    border-color: var(--secondary-color);
+    transform: translateX(8px);
+    box-shadow: -5px 0 15px rgba(108, 92, 231, 0.2);
+}
+
+.skill-item-box .resp {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.project-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid var(--primary-color);
+    height: 250px;
+    transition: transform 0.3s ease;
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: scale 0.5s ease;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(108, 92, 231, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-info h4 {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    color: #eee;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-card:hover img {
+    scale: 1.1;
+}
+
+.contact-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    border-radius: 15px;
+    background: var(--card-bg);
+    border: 1px solid rgba(108, 92, 231, 0.3);
+    color: #fff !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-tile i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.contact-tile:hover {
+    transform: translateY(-10px);
+    border-color: var(--secondary-color);
+    box-shadow: 0 10px 20px rgba(108, 92, 231, 0.2);
+}
+
+.linkedin:hover i { color: #0077b5; }
+.github:hover i { color: #fafafa; }
+.email:hover i { color: #ea4335; }
+.phone:hover i { color: #25d366; }
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    color: #fff;
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.5);
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .nome {
+        font-size: 1.8rem !important; /* Ajuste o número conforme necessário */
+        word-wrap: break-word;       /* Garante que se ainda for grande, ele quebre a linha */
+        text-align: center;
+    }
+}
+
+.custom-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+
+.project-card {
+    min-width: 100%;
+}
