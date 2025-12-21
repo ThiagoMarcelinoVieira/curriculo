@@ -1,6 +1,6 @@
 🚀 Meu Currículo Online
 
-![Preview do Meu Currículo](img/screenshot-site.png)
+![Preview do Meu Currículo](img/print-do-curriculo.png)
 
 Este projeto é o meu cartão de visitas no mundo do desenvolvimento. Em vez de um papel parado, decidi construir uma experiência interativa para mostrar minhas habilidades, projetos e minha trajetória na tecnologia.
 
