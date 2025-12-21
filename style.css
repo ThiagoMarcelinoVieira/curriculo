@@ -366,9 +366,9 @@ footer {
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
     .nome {
-        font-size: 1.8rem !important;
+        font-size: 1.7rem !important;
         word-wrap: break-word;
         text-align: center;
     }
@@ -427,4 +427,5 @@ footer {
 .language-box i {
     font-size: 2.5rem;
     color: var(--primary-color);
+
 }
