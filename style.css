@@ -393,7 +393,7 @@ footer {
 
 @media (max-width: 768px) {
   .nome {
-    font-size: 1.7rem !important;
+    font-size: 1.5rem !important;
     word-wrap: break-word;
     text-align: center;
   }
